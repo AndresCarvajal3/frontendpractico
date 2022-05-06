@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+        
+    <style>
+        :root {
+           --white: #FFFFFF;
+           --black:#000000;
+           --very-light-pink: #c7c7c7;
+           --text-input-field:#F7F7F7;
+           --hospital-green:#ACD9B2;
+           --sm:14px;
+           --md:16px;
+           --lg:18px;
+
+
+       }
+
+        
+     body { 
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+    }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .logo {
+          width: 180px;
+          margin-bottom: 80px;
+          justify-self: center;
+          display: none;
+        }
+        .title {
+          font-size: var(--lg);
+          margin: 0;
+          text-align: left;
+          color: var(--black);
+          padding-bottom: 40px;
+        }
+        .subtitle {
+          font-size: var(--md);
+          color: var(--very-light-pink);
+          text-align: center;
+          margin-top: 10px;
+        }
+        .form { 
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label { 
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+
+        input {
+            background:var(--text-input-field);
+            border: 0;
+            height: 40px;
+            border-radius: 6px;
+            font-size: var(--md);
+            margin-top: 0px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .button-primary {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 50px;
+            background: var(--hospital-green);
+            border: 0;
+            border-radius: 10px;
+            color: var(--white);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: var(--lg);
+        }
+
+        .login-button {
+            display: none;
+        }
+   @media (max-width: 640px) {
+      
+
+       .form{ 
+           height: 100%;
+           justify-content: space-between;
+       }
+
+       .button-primary {
+           display: none;
+        }
+
+       .button-secundary {
+           display: block;
+            height: 50px;
+            background: var(--hospital-green);
+            border: 0;
+            border-radius: 10px;
+            color: var(--white);
+            cursor: pointer;
+            font-size: var(--lg);
+        }
+         
+        .form-container { 
+            height: 100%;
+            padding-top: 25px;
+        }
+
+   }
+
+   .form div { 
+       display: flex;
+       flex-direction: column;
+   }
+    
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            
+
+
+            <h1 class="title">My account</h1>
+            
+            
+        
+             <form action="/" class="form">
+                 <div>
+                    <label for="text">Name</label>
+                    <input type="text" id="name" placeholder="Andres C" class="input input-name">
+                    <label for="Email">Email address</label>
+                    <input type="email" id="email" placeholder="andresc@gmail.com" class="input input-email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="************" class="input input-password">
+                 </div>
+                 
+                 <input type="submit" value="Create" class="button-primary">
+                 <input type="submit" value="Save" class="button-secundary login-button">
+                </form>
+        </div>
+    
+    </div>
+
+
+</body>
+</html>
